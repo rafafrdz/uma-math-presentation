@@ -1,11 +1,11 @@
-package charlauma.etljava;
+package uma.charla.etl;
 
-class Data {
+class JData {
 
     int id;
     String value;
 
-    Data(int id, String value) {
+    JData(int id, String value) {
         this.id = id;
         this.value = value;
     }

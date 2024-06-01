@@ -1,4 +1,4 @@
-package charlauma.etlscala
+package uma.charla.etl
 
 object ScalaETL {
 
@@ -6,18 +6,18 @@ object ScalaETL {
     List("1,foo", "2,baar", "3,baz", "Scala is better than Java (no chance)")
   }
 
-  def transform(data: List[String]): List[Data] = {
+  def transform(data: List[String]): List[SData] = {
     data.flatMap { line =>
       line.split(",") match {
-        case Array(id, value) if id.forall(_.isDigit) => Some(Data(id.toInt, value))
-        case Array(value) => Some(Data(187, value))
+        case Array(id, value) if id.forall(_.isDigit) => Some(SData(id.toInt, value))
+        case Array(value) => Some(SData(187, value))
         case _ => None
       }
 
     }
   }
 
-  def load(data: List[Data]): Unit = {
+  def load(data: List[SData]): Unit = {
     data.foreach(println)
   }
 

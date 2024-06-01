@@ -1,4 +1,4 @@
-package charlauma.etljava;
+package uma.charla.etl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,25 +15,25 @@ public class JavaETL {
         return data;
     }
 
-    public static List<Data> transform(List<String> data) {
+    public static List<JData> transform(List<String> data) {
         return data.stream()
                 .map(line -> {
                     String[] parts = line.split(",");
                     if(parts.length == 2 && parts[0].matches("\\d+")) {
-                        return new Data(Integer.parseInt(parts[0]), parts[1]);
+                        return new JData(Integer.parseInt(parts[0]), parts[1]);
                     } else {
-                        return new Data(187, parts[0]);
+                        return new JData(187, parts[0]);
                     }
         }).collect(Collectors.toList());
     }
 
-    public static void load(List<Data> data){
+    public static void load(List<JData> data){
         data.forEach(System.out::println);
     }
 
     public static void main(String[] args) {
         List<String> rawData = extract();
-        List<Data> transformedData = transform(rawData);
+        List<JData> transformedData = transform(rawData);
         load(transformedData);
     }
 

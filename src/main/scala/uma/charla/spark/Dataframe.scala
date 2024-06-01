@@ -1,4 +1,4 @@
-package charlauma.spark
+package uma.charla.spark
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
