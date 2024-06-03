@@ -9,3 +9,6 @@ libraryDependencies += "org.postgresql"    % "postgresql"           % "42.2.5"
 libraryDependencies += "org.apache.poi"    % "poi"                  % "5.0.0"
 libraryDependencies += "org.apache.poi"    % "poi-ooxml"            % "5.0.0"
 libraryDependencies += "org.typelevel"    %% "cats-core"            % "2.12.0"
+
+addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
+addCompilerPlugin("com.olegpy"   %% "better-monadic-for" % "0.3.1")
