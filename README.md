@@ -29,6 +29,16 @@ The Java application is located in the `src/main/java/uma/charla/etl/` directory
 - `JData`: A class that represents a row in a dataset.
 - `JavaETL`: This is the main class of the application. It demonstrates how to do an ETL with plain Java code.
 
+### Category Theory Example
+
+The Category Theory example is located in the `src/main/scala/uma/charla/category/` directory. It contains the following classes:
+
+- `Prod`: A trait that represents a production environment context.
+- `Local`: A trait that represents a local environment context.
+- `Test`: A trait that represents a test environment context.
+- `package` Contains the `Functor`, `Applicative`, and `Monad` type classes and also the natural transformations.
+- `Example`: This is the main class of the application. It demonstrates how to use Category Theory to abstract over different environments.
+
 ### Docker Setup
 
 The Docker setup is located in the `docker/` directory. It contains a `docker-compose.yml` file which is used to set up a PostgreSQL database for the Scala application to interact with.
